@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Student Registration</title>
+
+<link rel="stylesheet" href="css/style.css" />
+
+<script src="js/register.js"></script>
+<script src="js/borders2.js"></script>
+<script src="js/date.js"></script>
+</head>
+
+<body style="background-color:#eef;"> <!-- Inline CSS -->
+
+<marquee>STUDENT REGISTRATION FORM</marquee>
+
+<iframe src="header.html" width="100%" height="60" frameborder="1"></iframe>
+
+<div class="box" id="formBox">
+
+<form name="regForm" id="regForm" method="post"
+      onsubmit="return validateForm();">
+
+<h3>Registration Form</h3>
+
+<!-- Name -->
+Name:
+<input type="text" name="uname" id="uname" /><br /><br />
+
+<!-- Age -->
+Age:
+<input type="text" name="age" id="age" /><br /><br />
+
+<!-- Registration Number -->
+Registration Number:
+<input type="text" name="regno" id="regno" /><br /><br />
+
+<!-- Email -->
+Email:
+<input type="email" name="email" id="email" /><br /><br />
+
+<!-- Gender -->
+Gender:
+<input type="radio" name="gender" value="Male" />Male
+<input type="radio" name="gender" value="Female" />Female<br /><br />
+
+<!-- Course -->
+Course:
+<select name="course" id="course" onchange="changeBorder(this.value);">
+    <option value="">Select</option>
+    <option value="solid">BCA</option>
+    <option value="dashed">BSc</option>
+    <option value="double">BCom</option>
+</select><br /><br />
+
+<!-- Hobbies -->
+Hobbies:
+<input type="checkbox" name="hobby" value="Sports" />Sports
+<input type="checkbox" name="hobby" value="Music" />Music<br /><br />
+
+<!-- Address -->
+Address:<br />
+<textarea name="address" rows="3" cols="30"></textarea><br /><br />
+
+<input type="submit" value="Register" />
+<input type="reset" value="Clear" />
+
+</form>
+
+<button onclick="showDate()">Show Date</button>
+
+</div>
+
+</body>
+</html>
